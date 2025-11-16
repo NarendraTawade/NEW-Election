@@ -1,270 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>वसमत नगर परिषद - प्रभाग १५ घोषणापत्र (2025)</title>
-  <meta name="description" content="प्रभाग क्र. 15 साठी घोषणापत्र — स्ट्रीट लाईट, पाणी, रस्ते, स्वच्छता, आधुनिक समस्या आणि संपर्क फॉर्म." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>वसमत प्रभाग १५ – घोषणापत्र</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #eef6ff;
       margin: 0;
-      padding: 0;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f8ff;
+      overflow-x: hidden;
     }
+
+    /* ---------- HEADER SECTION ---------- */
     header {
-      background: linear-gradient(90deg, #0057b8, #00a3ff);
+      background: url('https://source.unsplash.com/1600x500/?india,flag') center/cover no-repeat;
       color: white;
-      padding: 20px;
       text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
+      padding: 80px 20px;
+      position: relative;
     }
-    section, .section {
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 10;
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+
+    /* ---------- SECTION CARD STYLE ---------- */
+    .section {
+      width: 90%;
+      max-width: 900px;
       background: white;
-      margin: 20px auto;
+      margin: 30px auto;
       padding: 20px;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-left: 6px solid #00a3ff;
-      animation: fadeIn 0.8s ease-in-out;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: 0.6s ease;
     }
-    section img, .section img {
+
+    .section.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .section img {
       width: 100%;
-      max-height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 12px;
     }
+
     h2 {
-      color: #003f7f;
+      color: #003e80;
+      font-size: 1.4rem;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    p {
+      font-size: 1rem;
+      color: #333;
     }
+
+    /* ---------- CONTACT FORM ---------- */
+    .contact {
+      width: 90%; max-width: 900px;
+      margin: 50px auto;
+      background: linear-gradient(135deg, #0073ff, #00c6ff);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      color: white;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      padding: 12px 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <h1>वसमत नगर परिषद — प्रभाग क्र. १५ (2025)</h1>
-        <p>घोषणापत्र | विकास - पारदर्शकपणा - सुरक्षा</p>
-      </div>
-      <nav>
-        <button class="navbtn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
-      </nav>
-    </header>
 
-    <section class="hero card visible">
-      <div class="left">
-        <h2>प्रभाग क्र. १५ — सर्वांगीण विकासाचा संकल्प</h2>
-        <p>योग्य स्ट्रीट लाईट, स्वच्छ पाणी, खड्डेमुक्त रस्ते, स्वच्छता व मोकळ्या जागांचा नियोजन — आणि आधुनिक समस्यांवर ठोस उपाय.</p>
-        <div class="cta">
-          <button class="btn" onclick="document.getElementById('manifesto').scrollIntoView({behavior:'smooth'})">घोषणापत्र वाचा</button>
-          <button class="btn ghost" onclick="document.getElementById('modern').scrollIntoView({behavior:'smooth'})">आधुनिक समस्या</button>
-        </div>
-      </div>
-      <div class="right" style="min-width:140px;text-align:right;">
-        <svg width="110" height="110" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2l2.09 6.26L20 10l-5 3.64L16.18 20 12 16.9 7.82 20 9 13.64 4 10l5.91-1.74L12 2z" fill="#06b6d4"/>
-        </svg>
-      </div>
-    </section>
+<header>
+  <h1>वसमत नगर परिषद – प्रभाग क्र. १५ | घोषणापत्र २०२५</h1>
+</header>
 
-    <main>
-      <!-- Manifesto / Ghoshana -->
-      <section id="manifesto" class="card">
-        <h3>घोषणापत्र — प्राथमिक मुद्दे</h3>
-        <div class="grid">
-          <div class="point">
-            <strong>स्ट्रीट लाईट्स</strong>
-            <p>प्रत्येक गल्ली व सार्वजनिक ठिकाणी पुरेशी आणि कार्यक्षम LED लाईट्स; बंद दिव्यांची तातडीने दुरुस्ती.</p>
-          </div>
-          <div class="point">
-            <strong>पिण्याचे पाणी</strong>
-            <p>निरंतर व स्वच्छ पाणीपुरवठा; जुनी पाइपलाइन बदलणे; पाणी मॉनिटरिंग.</p>
-          </div>
+<!-- Sections inserted dynamically later by update requests -->
+<div class="section"><img src="https://source.unsplash.com/800x400/?streetlight" /><h2>१. योग्य व कार्यक्षम स्ट्रीट लाईट</h2><p>प्रभागातील सर्व दिवे बदलून नवीन एलईडी दिवे बसवणे.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?water" /><h2>२. पिण्याच्या पाण्याची सुधारित व्यवस्था</h2><p>स्वच्छ, शुद्ध आणि नियमित पाणीपुरवठ्याची हमी.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?road" /><h2>३. पक्के व खड्डेमुक्त रस्ते</h2><p>पावसाळ्यापूर्वी सर्व रस्त्यांची दुरुस्ती व अपग्रेडेशन.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?cleaning" /><h2>४. स्वच्छता व्यवस्था</h2><p>दैनिक कचरा संकलन, नालेसफाई आणि स्वच्छ परिसराची हमी.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?park" /><h2>५. मोकळ्या जागांचे नियोजन</h2><p>बागा, खेळाची मैदाने आणि नागरिकांसाठी विश्रांती क्षेत्र.</p></div>
 
-          <div class="point">
-            <strong>रस्ते</strong>
-            <p>खड्डेमुक्त, मजबूत रस्ते व आधुनिक जलनिस्सारण व्यवस्था.</p>
-          </div>
-          <div class="point">
-            <strong>स्वच्छता</strong>
-            <p>दररोज कचरा संकलन, नाले साफसफाई व सार्वजनिक जागा स्वच्छ ठेवणे.</p>
-          </div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?flood" /><h2>६. आधुनिक समस्या – पावसाळ्यातील पाणी साचणे</h2><p>अत्याधुनिक ड्रेनेज व नाले व्यवस्थापन.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?waste" /><h2>७. कचरा वर्गीकरण व प्लास्टिक नियंत्रण</h2><p>घराघरात ओला/सुका कचरा विभागणी.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?traffic" /><h2>८. वाहतूक कोंडी कमी करणे</h2><p>पार्किंग, एकमार्गी रस्ते व ट्रॅफिक व्यवस्थापन.</p></div>
+<div class="section"><img src="https://source.unsplash.com/800x400/?cctv,security" /><h2>९. सुरक्षा व सीसीटीव्ही</h2><p>महत्वाच्या भागात उच्च गुणवत्तेचे सीसीटीव्ही कॅमेरे.</p></div>
 
-          <div class="point">
-            <strong>मोकळी जागा</strong>
-            <p>रिकाम्या जागांचा विकास — उद्याने, खेळमैदाने, व्यायाम सुविधा व वरिष्ठांसाठी विश्रांती ठिकाणे.</p>
-          </div>
-          <div class="point">
-            <strong>सुरक्षा</strong>
-            <p>सीसीटीव्ही, वाढती पोलिस गस्ती आणि विशेषतः महिलांसाठी सुरक्षितता उपाय.</p>
-          </div>
-        </div>
-      </section>
+<!-- Contact Section -->
+<div class="contact">
+  <h2>तुमच्या सूचनांचे स्वागत!</h2>
+  <input type="text" placeholder="तुमचे नाव" />
+  <input type="email" placeholder="ईमेल" />
+  <textarea rows="5" placeholder="तुमचा संदेश"></textarea>
+  <button>पाठवा</button>
+</div>
 
-      <!-- Modern Problems -->
-      <section id="modern" class="card">
-        <h3>आधुनिक समस्या — ज्या त्वरीत लक्ष देण्यास हव्यात</h3>
-        <div class="modern-list">
+<script>
+  const sections = document.querySelectorAll('.section');
+  const revealOnScroll = () => {
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect().top;
+      if (rect < window.innerHeight - 120) sec.classList.add('show');
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
 
-          <div class="modern-item">
-            <div class="badge">1</div>
-            <div>
-              <strong>पावसाळ्यात पाणी साचणे / ड्रेनेज समस्या</strong>
-              <p class="small">आधुनिक रेनवॉटर ड्रेनेज, नाल्यांची पूर्व-पावसाळी तपासणी आणि ज्या ठिकाणी पाणी साचते तिथे खास उपाय योजना.</p>
-            </div>
-          </div>
-
-          <div class="modern-item">
-            <div class="badge">2</div>
-            <div>
-              <strong>कचरा वर्गीकरण आणि प्लास्टिक प्रदूषण</strong>
-              <p class="small">घराघरातून कचरा वर्गीकरण, प्लास्टिक कमी करण्यासाठी मोहिमा आणि कडक अंमलबजावणी.</p>
-            </div>
-          </div>
-
-          <div class="modern-item">
-            <div class="badge">3</div>
-            <div>
-              <strong>वाहतूक कोंडी व पार्किंग</strong>
-              <p class="small">प्रभावी पार्किंग योजना, शाळा व हॉस्पिटल परिसरात वाहतूक नियंत्रण आणि पब्लिक ट्रान्सपोर्टला प्रोत्साहन.</p>
-            </div>
-          </div>
-
-          <div class="modern-item">
-            <div class="badge">4</div>
-            <div>
-              <strong>ढिगी धूळ व बांधकाम प्रदूषण</strong>
-              <p class="small">धूळ नियंत्रणासाठी जलशिंपडणी, बांधकाम नियमन व वेळोवेळी तपासणी.</p>
-            </div>
-          </div>
-
-          <div class="modern-item">
-            <div class="badge">5</div>
-            <div>
-              <strong>स्मार्ट/डिजिटल सुविधा कमतरता</strong>
-              <p class="small">ऑनलाइन तक्रार नोंदणी आणि ट्रॅकिंग, पारदर्शक कामकाजासाठी बेसिक डिजिटल प्लॅटफॉर्मचा अवलंब.</p>
-            </div>
-          </div>
-
-          <div class="modern-item">
-            <div class="badge">6</div>
-            <div>
-              <strong>अतिक्रमण</strong>
-              <p class="small">व्यवस्थित प्लॅनिंगद्वारे अतिक्रमण हटवणे, व्यापाऱ्यांशी समन्वय करून ठोस उपाय.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Promise and CTA -->
-      <section class="card">
-        <h3>आपला संकल्प — वचन आणि पारदर्शकता</h3>
-        <p class="small">मी प्रभाग १५ मधील प्रत्येक नागरिकाला समभागी समजून, पारदर्शक आणि जबाबदार विकासासाठी काम करेन. तुला आश्वासन — तुमच्या मताचा उपयोग प्रभागाच्या वास्तविक बदलांसाठी केला जाईल.</p>
-        <div style="margin-top:12px;display:flex;gap:10px">
-          <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">संपर्क करा</button>
-          <button class="btn ghost" onclick="window.print()">प्रिंट करा</button>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="card">
-        <h3>संपर्क करा</h3>
-        <div class="contact">
-          <div>
-            <p class="small">तुमचे प्रश्न, सूचना किंवा मदत हवी असल्यास खाली फॉर्म भरून पाठवा. सबमिट केल्यावर तुमचे पत्ता आणि संदेश तुमच्या ईमेलवर खुले होऊन पाठवण्यासाठी डिफॉल्ट मेल क्लायंट उघडेल आणि तुमची तक्रार लोकलमध्ये सुरक्षित ठेवली जाईल (तयार सेवेसाठी).</p>
-            <form id="contactForm" onsubmit="return handleSubmit(event)">
-              <input id="name" placeholder="नाव" required />
-              <input id="email" type="email" placeholder="ईमेल" required />
-              <input id="phone" placeholder="फोन (ऐच्छिक)" />
-              <textarea id="message" rows="5" placeholder="आपला संदेश / तक्रार" required></textarea>
-              <div style="display:flex;gap:8px">
-                <button class="btn" type="submit">पाठवा</button>
-                <button type="button" class="btn ghost" onclick="saveDraft()">ड्राफ्ट जतन करा</button>
-              </div>
-            </form>
-            <div id="status" style="margin-top:10px;"></div>
-
-            <div style="margin-top:12px">
-              <strong>अधिक माहिती किंवा प्रत्यक्ष भेटीसाठी:</strong>
-              <p class="small">(इथे तुमचा पत्ता, फोन किंवा संपर्क वेळ लिहा)</p>
-            </div>
-          </div>
-
-          <aside style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
-            <h4 style="margin-top:0">त्वरीत संपर्क</h4>
-            <p class="small">ईमेल: <a href="mailto:example@vasmat.org" style="color:var(--accent)">example@vasmat.org</a></p>
-            <p class="small">फोन: <a href="tel:+911234567890" style="color:var(--accent)">+91 12345 67890</a></p>
-            <p class="small">प्रभाग: क्र. १५</p>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>© 2025 — प्रभाग क्र. १५ घोषणापत्र • तयारकर्ते: तुमचा नाव / टीम. ही एक नमुना वेबपृष्ठ आहे.</footer>
-
-  </div>
-
-  <button class="topbtn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-  <script>
-    // reveal on scroll
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible') } })
-    },{threshold:0.12});
-    document.querySelectorAll('section.card').forEach(s=>observer.observe(s));
-
-    function handleSubmit(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name||!email||!message){alert('कृपया सर्व आवश्यक फील्ड भरा');return false}
-
-      // store locally
-      const submissions = JSON.parse(localStorage.getItem('vasmat_subs')||'[]');
-      submissions.push({name,email,phone,message,ts:new Date().toISOString()});
-      localStorage.setItem('vasmat_subs', JSON.stringify(submissions));
-
-      // open mail client as fallback (mailto)
-      const subject = encodeURIComponent('प्रभाग १५ — संपर्क फॉर्म: '+name);
-      const body = encodeURIComponent('नाव: '+name+'\nईमेल: '+email+'\nफोन: '+phone+'\n\nसंदेश:\n'+message);
-      window.location.href = 'mailto:example@vasmat.org?subject='+subject+'&body='+body;
-
-      const status = document.getElementById('status');
-      status.innerHTML = '<div class="success">आपला संदेश सुरक्षित जतन केला गेला आहे. (डिव्हाइसवर ड्राफ्ट होता). धन्यवाद!</div>';
-      document.getElementById('contactForm').reset();
-      return false;
-    }
-
-    function saveDraft(){
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const draft = {name,email,phone,message,ts:new Date().toISOString()};
-      localStorage.setItem('vasmat_draft', JSON.stringify(draft));
-      const status = document.getElementById('status');
-      status.innerHTML = '<div class="success">ड्राफ्ट जतन झाला.</div>';
-    }
-
-    // load draft if any
-    (function loadDraft(){
-      try{
-        const d = JSON.parse(localStorage.getItem('vasmat_draft'))||null;
-        if(d){ document.getElementById('name').value=d.name||''; document.getElementById('email').value=d.email||''; document.getElementById('phone').value=d.phone||''; document.getElementById('message').value=d.message||''; }
-      }catch(e){/* ignore */}
-    })();
-  </script>
 </body>
 </html>
